@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,900;1,9..40,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-dark: #0a0a0a;
+    --color-acc: #cc55ff;
+    --color-light: #fff0ff;
+    --color-dark-t-i: #0a0a0aaa;
+    --color-acc-t-i: #cc55ffaa;
+    --color-light-t-i: #fff0ffaa;
+    --color-dark-t-ii: #0a0a0a55;
+    --color-acc-t-ii: #cc55ff55;
+    --color-light-t-ii: #fff0ff55;
+    --color-gray: #282828;
+    --transparent: #00000000;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+h6 {
+    color: var(--color-light);
+    font-size: 8pt;
+    letter-spacing: 2px;
+    font-family: dm sans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.nav-ol {
+    background: var(--transparent);
+    pointer-events: none;
+    transition: .8s;
+    z-index: 1000;
+}
+
+.back-slide {
+    background: var(--color-dark);
+    z-index: 0;
+}
+
+.est-txt:hover {
+    color: var(--color-acc);
+}
+
+.nav-btn {
+    height: 96px;
+    width: 96px;
+    z-index: 12;
+    pointer-events: all;
+    background: var(--color-dark);
+    backdrop-filter: blur(6px);
+    border: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.nav-btn::before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 96px;
+    width: 96px;
+    border-radius: 100%;
+    background: var(--color-acc);
+    transform: translateY(100%);
+    transform-origin: bottom;
+    transition: .4s;
+}
+
+.nav-btn:hover::before {
+    transform: translateY(0%);
+    transform-origin: right;
+    height: 96px;
+    width: 96px;
+    border-radius: 0;
+}
+
+.navig {
+    background: var(--color-gray);
+    transition: .4s;
+}
+
+.main-page {
+    z-index: 10;
+}
+
+.intro-gap {
+    background: var(--color-acc);
+    z-index: 0;
+    opacity: 0;
+}
+
+.about {
+    background: var(--color-dark);
+    padding: 0 54px 0 54px;
+}
+
+.rusir {
+    font-family: dm sans;
+    color: var(--color-light);
+    white-space: nowrap;
+}
+
+.rvsc-logo {
+    background: url(images/revi-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mare {
+    font-family: poppins;
+    color: var(--color-light);
+    text-align: left;
+}
+
+.rusir span {
+    font-family: poppins;
+}
+
+.about-btn {
+    font-family: fragment mono;
+    margin-top: 20px;
+    width: 100%;
+    height: 54px;
+    z-index: 12;
+    color: var(--color-light);
+    pointer-events: all;
+    background: var(--color-dark);
+    backdrop-filter: blur(6px);
+    border: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.about-btn::before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 96px;
+    width: 100%;
+    border-radius: 100%;
+    background: var(--color-acc);
+    transform: translateY(100%);
+    transform-origin: bottom;
+    transition: .4s;
+}
+
+.about-btn:hover::before {
+    transform: translateY(0%);
+    transform-origin: right;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+}
+
+.nav-t-g-left {
+    height: calc(32px + 32px + 86px);
+    width: calc(32px + 32px + 86px);
+    border-right: 1px solid var(--color-light);
+}
+
+.nav-t-g-right {
+    height: calc(32px + 32px + 86px);
+    width: calc(100% - 150px);
+}
+
+.nav-ul li {
+    height: 48px;
+    border-bottom: 1px solid var(--color-light);
+    transition: .2s;
+}
+
+.nav-ul li a {
+    height: 100%;
+    width: 100%;
+    color: var(--color-light);
+    font-family: fragment mono;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    transition: .4s;
+}
+
+.nav-ul li:hover {
+    background: var(--color-acc);
+}
+
+.nav-ul li:hover a {
+    padding: 40px;
+}
+
+.hor-bor {
+    height: 1px;
+    background: var(--color-light);
+}
+
+.ev-title {
+    background: var(--color-dark);
+    border-top: 1px solid var(--color-light);
+}
+
+.events {
+    background: var(--color-dark);
+}
+
+.events a {
+    height: 100%;
+    width: calc(100% / 3);
+    border-top: 1px solid var(--color-light);
+    border-bottom: 1px solid var(--color-light);
+    text-decoration: none;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.events a::before {
+    content: '';
+    position: absolute;
+    height: 80vh;
+    width: calc(100vw / 3);
+    background: var(--color-acc);
+    transform: translateX(-100%);
+    border-radius: 0 100% 100% 0;
+    z-index: 0;
+    transition: .4s;
+}
+
+.events a:hover::before {
+    transform: translateX(0);
+    border-radius: 0;
+}
+
+h2 {
+    font-size: 32pt;
+    font-weight: 300;
+    font-family: poppins;
+    color: var(--color-light);
+    z-index: 1;
+}
+
+.ver-bor {
+    height: 100%;
+    width: 1px;
+    background: var(--color-light);
+}
+
+.est-txt {
+    color: var(--color-light-t-ii);
+    font-family: fragment mono;
+    pointer-events: all;
+}
+
+.rvsc-txt {
+    color: var(--color-light);
+    font-family: poppins;
+}
+
+.sub-footer {
+    z-index: 1;
+    position: relative;
+    background: var(--color-dark);
+    border-top: 1px solid var(--color-light);
+}
+
+.sub-footer h2 {
+    text-align: center;
+}
+
+.rvsc-s-f {
+    background: url(images/revi-logo.png);
+    background-size: cover;
+    background-position: center;
+    opacity: .2;
+}
+
+footer {
+    z-index: 5;
+    background: var(--color-dark);
+    border-top: 1px solid var(--color-light);
+    padding: 0 42px 0 42px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+footer h1 {
+    font-size: 72pt;
+    font-weight: 400;
+    color: var(--color-acc);
+    opacity: .3;
+    font-family: poppins;
+}
+
+footer ul {
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+}
+
+footer li {
+    height: 42px;
+    width: 42px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer li::before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    height: 54px;
+    width: 54px;
+    border-radius: 100%;
+    background-color: var(--color-acc);
+    transform: scale(0);
+    transition: .4s;
+}
+
+footer li:hover::before {
+    transform: scale(1);
+    border-radius: 0;
+}
+
+#navBar {
+    background-color: var(--color-dark);
+    border-right: 1px solid var(--color-light);
+    transition: .4s;
+    z-index: 4;
+    pointer-events: all;
+    transform: translateX(-100%);
+}
+
+#navBar .nav-top-gap {
+    height: calc(32px + 32px + 86px);
+    border-bottom: 1px solid var(--color-light);
+}
+
+.nav-bottom-gap {
+    height: calc(100% - calc(150px + calc(48px * 7)));
+    width: 100%;
+}
